@@ -1,4 +1,4 @@
-const DATA = ["Выучить Реакт", "Выучить Ангурял", "Выучить Ембер"];
+const DATA = ["Выучить React", "Выучить Angular", "Выучить Emberjs"];
 const ESCAPE_KEY = 27;
 const ENTER_KEY = 13;
 
@@ -10,7 +10,7 @@ const ItemTodo = React.createClass({
             <div>
                 <li className="item">
                     <input className='toggle-all' type='checkbox'/>
-                    <span > my Task { todoText }</span>
+                    <span > { todoText }</span>
                 </li>
             </div>
         );
@@ -61,7 +61,7 @@ const AppTodo = React.createClass({
         }
         event.preventDefault();
         let v = e.target.value;
-        console.log(v);
+        console.log(e.keyCode);
         const myTodos = this.props.data;
         myTodos.push(v);
         console.log(myTodos);
